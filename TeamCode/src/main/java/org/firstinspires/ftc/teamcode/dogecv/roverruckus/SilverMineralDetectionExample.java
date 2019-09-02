@@ -9,7 +9,7 @@ import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import org.opencv.core.Rect;
 import org.opencv.core.Size;
 
-@Autonomous(group="DogeCV")
+@Autonomous(group = "DogeCV")
 public class SilverMineralDetectionExample extends OpMode {
     /* Detector object */
     private SilverDetector detector;
@@ -50,8 +50,8 @@ public class SilverMineralDetectionExample extends OpMode {
                 .addData("Is Found", detector.isFound())
                 .addData("Location",
                         detector.isFound() ?
-                                Integer.toString((int) (rect.x + rect.width*0.5)) + ", "
-                                        + Integer.toString((int) (rect.y+0.5*rect.height))
+                                (int) (rect.x + rect.width * 0.5) + ", "
+                                        + (int) (rect.y + 0.5 * rect.height)
                                 : "N/A");
 
         // Update telemetry

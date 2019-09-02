@@ -23,11 +23,9 @@ public class TeleOpIntakeControl implements Command {
     public void periodic() {
         if (gamepad.right_bumper) {
             intake.setState(Intake.State.INTAKE);
-        }
-        else if (gamepad.left_bumper) {
+        } else if (gamepad.left_bumper) {
             intake.setState(Intake.State.SPIT_OUT);
-        }
-        else {
+        } else {
             intake.setState(Intake.State.STOP);
         }
     }

@@ -8,7 +8,7 @@ import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 
 import org.opencv.core.Rect;
 
-@Autonomous(group="DogeCV")
+@Autonomous(group = "DogeCV")
 public class GoldMineralDetectionExample extends OpMode {
     private GoldDetector detector;
 
@@ -52,8 +52,8 @@ public class GoldMineralDetectionExample extends OpMode {
                 .addData("Is Found", detector.isFound())
                 .addData("Location",
                         detector.isFound() ?
-                                Integer.toString((int) (rect.x + rect.width*0.5)) + ", "
-                                        + Integer.toString((int) (rect.y+0.5*rect.height))
+                                (int) (rect.x + rect.width * 0.5) + ", "
+                                        + (int) (rect.y + 0.5 * rect.height)
                                 : "N/A");
 
         // Update telemetry
@@ -63,6 +63,6 @@ public class GoldMineralDetectionExample extends OpMode {
     @Override
     public void stop() {
         // Disable the detector
-        if(detector != null) detector.disable();
+        if (detector != null) detector.disable();
     }
 }

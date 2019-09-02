@@ -13,7 +13,7 @@ import org.opencv.core.Scalar;
  * This examples shows how to make your own detector using GenericDetector; this is only recommended
  * if no detector exists for your use case.
  */
-@Autonomous(group="DogeCV")
+@Autonomous(group = "DogeCV")
 public class GenericDetectorExample extends OpMode {
     // Detector object
     GenericDetector detector = new GenericDetector();
@@ -44,8 +44,8 @@ public class GenericDetectorExample extends OpMode {
                 .addData("Is Found", detector.isFound())
                 .addData("Location",
                         detector.isFound() ?
-                                Integer.toString((int) (rect.x + rect.width*0.5)) + ", "
-                                        + Integer.toString((int) (rect.y+0.5*rect.height))
+                                (int) (rect.x + rect.width * 0.5) + ", "
+                                        + (int) (rect.y + 0.5 * rect.height)
                                 : "N/A");
 
         // Update telemetry
@@ -55,6 +55,6 @@ public class GenericDetectorExample extends OpMode {
     @Override
     public void stop() {
         // Disable the detector
-        if(detector != null) detector.disable();
+        if (detector != null) detector.disable();
     }
 }

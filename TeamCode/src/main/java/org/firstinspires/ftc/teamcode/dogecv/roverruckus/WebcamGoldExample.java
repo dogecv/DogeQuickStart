@@ -10,7 +10,7 @@ import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import org.firstinspires.ftc.robotcore.external.hardware.camera.WebcamName;
 import org.opencv.core.Rect;
 
-@Autonomous(group="DogeCV")
+@Autonomous(group = "DogeCV")
 public class WebcamGoldExample extends OpMode {
     //Webcam object
     WebcamName webcamName;
@@ -28,7 +28,7 @@ public class WebcamGoldExample extends OpMode {
 
         //Sets the Vuforia license key. ALWAYS SET BEFORE INIT!
         detector.VUFORIA_KEY = "---INSERT YOUR KEY HERE---";
-        
+
         //Inits the detector. Choose which camera to use, and whether to detect VuMarks here
         detector.init(hardwareMap.appContext, CameraViewDisplay.getInstance(), DogeCV.CameraMode.WEBCAM, false, webcamName);
 
@@ -51,8 +51,8 @@ public class WebcamGoldExample extends OpMode {
                 .addData("Is Found", detector.isFound())
                 .addData("Location",
                         detector.isFound() ?
-                                Integer.toString((int) (rect.x + rect.width*0.5)) + ", "
-                                        + Integer.toString((int) (rect.y+0.5*rect.height))
+                                (int) (rect.x + rect.width * 0.5) + ", "
+                                        + (int) (rect.y + 0.5 * rect.height)
                                 : "N/A");
 
         telemetry.update();

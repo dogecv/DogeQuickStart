@@ -6,7 +6,6 @@ import com.disnodeteam.dogecv.detectors.DogeCVDetector;
 import com.qualcomm.robotcore.eventloop.opmode.Autonomous;
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 
-import org.opencv.core.Mat;
 import org.opencv.core.Point;
 
 /**
